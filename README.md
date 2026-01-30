@@ -62,10 +62,10 @@ The plugin uses a configuration file in `.ini` format to store the API token.
 Create a file, for example `czechia.ini`, with the following content:
 
 ```ini
-dns_czechia_api_token = YOUR_API_TOKEN
+dns_czechia_authorization_token = YOUR_API_TOKEN
 ```
 
-- `dns_czechia_api_token` – API token from your CZECHIA.COM account
+- `dns_czechia_authorization_token` – API token from your CZECHIA.COM account
 - the token must have permission to manage DNS records for the domain
 
 ### 2. Set secure file permissions
