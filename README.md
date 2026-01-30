@@ -133,4 +133,4 @@ Official CZECHIA.COM technical support:
 
 ## License
 
-Specify the project license here (for example MIT or Apache License 2.0).
+MIT licence.
