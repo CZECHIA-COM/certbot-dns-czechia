@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: certbot-dns-czechia
+Version: 0.1.0
+Summary: Certbot DNS plugin for Czechia/ZONER DNS API
+Requires-Python: >=3.9
+Requires-Dist: certbot>=2.0.0
+Requires-Dist: requests>=2.28.0

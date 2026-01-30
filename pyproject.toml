@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certbot-dns-czechia"
+version = "0.1.0"
+description = "Certbot DNS plugin for Czechia/ZONER DNS API"
+requires-python = ">=3.9"
+dependencies = [
+  "certbot>=2.0.0",
+  "requests>=2.28.0",
+]
+
+[project.entry-points."certbot.plugins"]
+dns-czechia = "certbot_dns_czechia.authenticator:Authenticator"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["certbot_dns_czechia*"]
