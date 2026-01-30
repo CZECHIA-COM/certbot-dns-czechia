@@ -1,0 +1,19 @@
+# credentials
+*.ini
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# virtualenv
+.venv/
+venv/
+
+# build artifacts
+dist/
+build/
+
+# certbot runtime data
+letsencrypt/
