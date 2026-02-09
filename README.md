@@ -43,13 +43,66 @@ This means:
 
 ---
 
-## Installation
+## Installation (from source, no PyPI)
 
-The plugin is distributed as a standalone Python package.
+This plugin is **not** published on PyPI. Install it directly from the GitHub source code.
+
+### Option A: System-wide install for Debian/Ubuntu (recommended)
+
+1) Copy the plugin sources to a permanent location, for example:
 
 ```bash
-pip install certbot-dns-czechia
+sudo mkdir -p /opt/certbot-dns-czechia
+sudo cp -a /path/to/cloned/repo/* /opt/certbot-dns-czechia/
 ```
+
+(Alternatively, you can clone the repository directly into `/opt/certbot-dns-czechia`.)
+
+2) Install the plugin into the system Python used by Certbot:
+
+```bash
+cd /opt/certbot-dns-czechia
+sudo python3 -m pip install .
+```
+
+3) Verify that Certbot can see the plugin:
+
+```bash
+certbot plugins
+```
+
+You should see `dns-czechia` listed among available plugins.
+
+> Note: Installing into the system Python may require the `python3-pip` package to be installed.
+
+---
+
+### Option B: Run without installation (development / quick test)
+
+You can run Certbot with this plugin directly from the source tree by extending `PYTHONPATH`:
+
+```bash
+export PYTHONPATH=/opt/certbot-dns-czechia/src
+certbot plugins
+```
+
+For a one-off command:
+
+```bash
+PYTHONPATH=/opt/certbot-dns-czechia/src certbot plugins
+```
+
+---
+
+### Where to put the files
+
+Any location is fine as long as:
+- the directory contains the `src/` folder with the `certbot_dns_czechia` package, and
+- you either install it (Option A) or point `PYTHONPATH` to `<repo>/src` (Option B).
+
+A common and recommended location on Linux servers is:
+
+- `/opt/certbot-dns-czechia/`
 
 ---
 
